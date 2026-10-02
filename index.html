@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>بيت عائلة نور — 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loading"><div class="loader"></div><div>جاري بناء البيت 3D...</div></div>
+
+  <div id="game">
+    <canvas id="scene"></canvas>
+
+    <div class="topbar">
+      <div class="brand">🏠 بيت عائلة نور</div>
+      <div class="status"><span id="clock">18:30</span> · <span id="weather">مساء هادئ</span></div>
+    </div>
+
+    <div id="phonePanel" class="panel hidden">
+      <div class="panelHead">
+        <b id="phoneOwner">الهاتف</b>
+        <button id="closePhone">×</button>
+      </div>
+      <div id="chatList"></div>
+      <div class="phoneInput">
+        <input id="chatInput" placeholder="اكتب رسالة..." />
+        <button id="sendBtn">إرسال</button>
+      </div>
+    </div>
+
+    <div id="dialog" class="dialog hidden">
+      <div class="dialogName" id="dialogName"></div>
+      <div id="dialogText"></div>
+      <button id="dialogClose">حسنًا</button>
+    </div>
+
+    <div class="hint">WASD للحركة · اسحب الشاشة للتحريك · اضغط على شخصية للتفاعل</div>
+
+    <div class="mobileControls">
+      <button data-key="w">▲</button>
+      <div><button data-key="a">◀</button><button data-key="s">▼</button><button data-key="d">▶</button></div>
+    </div>
+
+    <div class="actions">
+      <button id="homeBtn">🏠</button>
+      <button id="nightBtn">🌙</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
